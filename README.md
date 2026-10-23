@@ -1,23 +1,23 @@
 # Code breakdown
 
-## Day 1
+## Step 1
 - Customer name<br>
 - Main menu<br>
 - Loop<br>
 
-## Day 2
+## Step 2
 - Food Menu<br>
 - Drink Menu<br>
 
-## Day 3 
+## Step 3 
 - Bill Calculation
 
-## Day 4
+## Step 4
 - Checkout<br>
 - Cash<br>
 - Card <br>
 
-## Day 5
+## Step 5
 - Receipt file<br>
 - Error handeling
 
