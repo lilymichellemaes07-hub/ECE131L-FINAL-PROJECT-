@@ -1,4 +1,4 @@
-# RESTRUANT MENU SYSTEM 
+# Restaurant Menu System
 This is our final project 
 
 Our group members:
