@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <string.h>
+
+// STEP ONE: CUSTOMER NAME, MAIN MENU, AND LOOP
+
+// Struct to store customer information:
+struct Customer
+{
+        char name[50]; // stores customers name
+        float totalBill; // stores customers total bill
+};
+
+int main() // start the program
+{
+        struct Customer customer; // creating a customer variable using Customer struct
+        customer.totalBill = 0.0; // setting the bill at zero
+
+        int choice; // Variable to store the customers main menu choice
+
+        printf("\n");
+        printf("Customers Name: "); // Prints out the customers name
+
+        fgets(customer.name, sizeof(customer.name), stdin); // Reading the customers name from the keyboard
+
+        customer.name[strcspn(customer.name, "\n")] = 0;
+
+        // Loop continues until the user chooses option five from main menu
+        do
+        {
+                printf("\n");
+                printf(" ====== RESTAURANT MAIN MENU ======\n");
+                printf("\n");
+                printf(" ==== Welcome to Digi Diner! ====\n");
+                printf("\n");
+                printf("Customer: %s\n", customer.name);
+                printf("\n");
+
+                // Display main menu options
+                printf("1. Food Menu\n");
+                printf("2. Drink Menu\n");
+                printf("3. Dessert Menu\n");
+                printf("4. View Total Bill\n");
+                printf("5. Checkout\n");
+                printf("6. Exit\n");
+                printf("\n");
+
+                // Ask the user their choice:
+                printf("Enter choice: ");
+                scanf("%d", &choice);
+                printf("\n");
+
+                switch(choice)
+                {
+                        case 1:
+                                printf("Food Menu Selected!\n");
+                                break;
+                        case 2:
+                                printf("Drink Menu Selected!\n");
+                                break;
+                        case 3:
+                                printf("Dessert Menu Selected!\n");
+                                break;
+                        case 4:
+                                printf("Current Bill: %.2f\n", customer.totalBill);
+                                break;
+                        case 5:
+                                printf("Checkout Selected!\n");
+                                break;
+                        case 6:
+                                printf("Thank you for visiting Digi Diner, have a great day %s!\n", customer.name);
+                                break;
+                        default:
+                                printf("ERROR: Invalid choice, try again!\n");
+                }
+        }
+        while(choice != 6);
+        return 0;
+}
