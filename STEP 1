@@ -22,7 +22,7 @@ int main() // start the program
 
         fgets(customer.name, sizeof(customer.name), stdin); // Reading the customers name from the keyboard
 
-        customer.name[strcspn(customer.name, "\n")] = 0;
+        customer.name[strcspn(customer.name, "\n")] = '\0';
 
         // Loop continues until the user chooses option five from main menu
         do
