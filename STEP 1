@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// STEP ONE: CUSTOMER NAME, MAIN MENU, AND LOOP
 
 // Struct to store customer information:
 struct Customer
