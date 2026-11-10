@@ -1,3 +1,5 @@
 int foodMenu(*totalBill)
 {
-printf("Select choices from food menu using number, 
+int foodChoice;
+printf("Select choices from food menu.\n");
+do
