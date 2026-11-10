@@ -71,6 +71,6 @@ int main() // start the program
                                 printf("ERROR: Invalid choice, try again!\n");
                 }
         }
-        while(choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 || choice != 6);
+        while(choice != 6);
         return 0;
 }
