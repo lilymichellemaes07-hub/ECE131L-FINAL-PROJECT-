@@ -66,6 +66,11 @@ int main() // start the program
                                 printf("Checkout Selected!\n");
                                 break;
                         case 6:
+                                if (customer.totalBill !=0.0)
+                                {
+                                printf("You still have checkout due, please pay before leaving.\n");
+                                }
+                                else
                                 printf("Thank you for visiting Digi Diner, have a great day %s!\n", customer.name);
                                 break;
                         default:
