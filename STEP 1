@@ -24,25 +24,24 @@ int main() // start the program
         customer.name[strcspn(customer.name, "\n")] = '\0';
 
         // Loop continues until the user chooses option five from main menu
+        printf("\n");
+        printf(" ====== RESTAURANT MAIN MENU ======\n");
+        printf("\n");
+        printf(" ==== Welcome to Digi Diner! ====\n");
+        printf("\n");
+        printf("Customer: %s\n", customer.name);
+        printf("\n");
+
+        // Display main menu options
+        printf("1. Food Menu\n");
+        printf("2. Drink Menu\n");
+        printf("3. Dessert Menu\n");
+        printf("4. View Total Bill\n");
+        printf("5. Checkout\n");
+        printf("6. Exit\n");
+        printf("\n");
         do
         {
-                printf("\n");
-                printf(" ====== RESTAURANT MAIN MENU ======\n");
-                printf("\n");
-                printf(" ==== Welcome to Digi Diner! ====\n");
-                printf("\n");
-                printf("Customer: %s\n", customer.name);
-                printf("\n");
-
-                // Display main menu options
-                printf("1. Food Menu\n");
-                printf("2. Drink Menu\n");
-                printf("3. Dessert Menu\n");
-                printf("4. View Total Bill\n");
-                printf("5. Checkout\n");
-                printf("6. Exit\n");
-                printf("\n");
-
                 // Ask the user their choice:
                 printf("Enter choice: ");
                 scanf("%d", &choice);
@@ -72,6 +71,6 @@ int main() // start the program
                                 printf("ERROR: Invalid choice, try again!\n");
                 }
         }
-        while(choice != 6);
+        while(choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 || choice != 6);
         return 0;
 }
