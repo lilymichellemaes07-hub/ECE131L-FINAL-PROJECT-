@@ -51,6 +51,7 @@ int main() // start the program
                 {
                         case 1:
                                 printf("Food Menu Selected!\n");
+                                foodMenu(&customer.totalBill);
                                 break;
                         case 2:
                                 printf("Drink Menu Selected!\n");
