@@ -1,11 +1,312 @@
-int foodMenu(*totalBill)
+#include <stdio.h>
+#include <string.h>
+
+// Struct to store customer information:
+struct Customer
 {
-int foodChoice;
-printf("Select choices from food menu.\n");
-do
+        char name[50]; // stores customers name
+        float totalBill; // stores customers total bill
+};
+
+// Function prototypes:
+void displayFoodMenu(struct Customer *customer);
+void displayDrinkMenu(struct Customer *customer);
+void displayDessertMenu(struct Customer *customer);
+void viewBill(struct Customer customer);
+void checkout(struct Customer *customer);
+
+int main() // start the program
 {
-scanf("%d", &foodChoice);
-switch(foodChoice)
+        struct Customer customer; // creating a customer variable using Customer struct
+        customer.totalBill = 0.0; // setting the bill at zero
+
+        int choice; // Variable to store the customers main menu choice
+
+        printf("\n");
+        printf("Customers Name: "); // Prints out the customers name
+
+        fgets(customer.name, sizeof(customer.name), stdin); // Reading the customers name from the keyboard
+
+        customer.name[strcspn(customer.name, "\n")] = '\0'; // Replacing the newline with '\0'
+
+        // Loop continues until the user chooses option five from main menu
+        do
+        {
+                printf("\n");
+                printf(" ====== RESTAURANT MAIN MENU ======\n");
+                printf("\n");
+                printf(" ==== Welcome to Digi Diner! ====\n");
+                printf("\n");
+                printf("Customer: %s\n", customer.name);
+                printf("\n");
+
+                // Display main menu options
+                printf("1. Food Menu\n");
+                printf("2. Drink Menu\n");
+                printf("3. Dessert Menu\n");
+                printf("4. View Total Bill\n");
+                printf("5. Checkout\n");
+                printf("6. Exit\n");
+                printf("\n");
+
+                // Ask the user their choice:
+                printf("Enter choice: ");
+                scanf("%d", &choice);
+                printf("\n");
+
+                // Use switch case to execute menus
+                switch(choice)
+                {
+                        case 1:
+                                displayFoodMenu(&customer); //Sends the customers address so the bill can be updated
+                                break;
+                        case 2:
+                                displayDrinkMenu(&customer); //Display drink menu
+                                break;
+                        case 3:
+                                displayDessertMenu(&customer); //Display dessert menu
+                                break;
+                        case 4:
+                                viewBill(customer); //Look at current bill
+
+                                break;
+                        case 5:
+                                checkout(&customer); //Begin checkout proccess
+                                break;
+                        case 6:
+                                printf("Thank you for visiting Digi Diner, have a great day %s!\n", customer.name); //Exiting the program
+                                break;
+                        default:
+                                printf("ERROR: Invalid choice, try again!\n");
+                }
+        }
+        while(choice != 6);
+        return 0;
+}
+
+// Display Food Menu:
+void displayFoodMenu(struct Customer *customer)
 {
-  case 1:
-  
+        // Array containing all of food names:
+        char foodNames[][50] =
+        {
+                "Compiler Club Sandwich", "Build-a-Byte Pizza", "Firewall Chicken Wings", "Pixel Pointer Pasta with Adress Alfredo", "Struct salad", "Back to main menu",
+        };
+
+        // Matching array containing food prices:
+        float foodPrices[] =
+        {
+                14.99, 15.99, 16.99, 18.99, 14.99
+        };
+
+        // Stores customers food selection:
+        int choice;
+
+        printf("\n");
+        printf(" ====== FOOD MENU ======\n");
+        printf("\n");
+
+        // Using if loop to display food menu items along with prices:
+        for(int i= 0; i < 5; i++)
+        {
+                printf("%d. %s - $%.2f\n", i + 1, foodNames[i], foodPrices[i]);
+                
+        printf("6. Back to Main Menu\n");
+        printf("\n");
+        printf("Choose food item: ");
+        scanf("%d",&choice);
+
+        if(choice >= 1 && choice <= 5)
+        {
+                // Add selected items price to running bill:
+                customer->totalBill += foodPrices[choice - 1];
+
+                printf("\n");
+                // Confirming the food was added:
+                printf("%s added to order.\n", foodNames[choice - 1]);
+                printf("\n");
+        }
+}
+
+// Display Drink Menu:
+void displayDrinkMenu(struct Customer *customer)
+{
+        // Array containing all of drink items:
+        char drinkNames[][50] =
+        {
+                "Binary Blast", "Syntax Soda", "Python Punch", "CharCola", "Java Coffee",
+        };
+
+        // Matching array containing drink prices:
+        float drinkPrices[] =
+        {
+                6.99, 7.99, 5.99, 6.99, 8.99
+        };
+
+        // Stores customers drink choice:
+        int choice;
+
+        printf("\n");
+        printf(" ====== DRINK MENU ======\n");
+        printf("\n");
+
+        // Using for loop to display drink items and prices:
+        for(int i= 0; i < 5; i++)
+        {
+                printf("%d. %s - $%.2f\n", i + 1, drinkNames[i], drinkPrices[i]);
+        }
+
+        printf("6. Back to Main Menu\n");
+        printf("\n");
+
+        // Getting drink choice from user:
+        printf("Choose drink item: ");
+        scanf("%d", &choice);
+
+        if(choice >= 1 && choice <= 5)
+        {
+                // Add selected drink item prices to running bill:
+                customer->totalBill += drinkPrices[choice - 1];
+
+                printf("\n");
+                // Confirming item was added
+                printf("%s added to order.\n", drinkNames[choice - 1]);
+                printf("\n");
+        }
+
+}
+
+// Display Desser Menu:
+void displayDessertMenu(struct Customer *customer)
+{
+        // Array containing all of dessert items:
+        char dessertNames[][50] =
+        {
+                "Debug Donut", "Binary Brownie", "Raspberry Pi", "Function Funnel Cake", "Terminal Tiramisu",
+        };
+
+        // Matching array containing all of drink prices:
+        float dessertPrices[] =
+        {
+                1.99, 2.99, 3.99, 6.99, 5.99
+        };
+
+        // Stores users dessert choice
+        int choice;
+
+        printf("\n");
+        printf(" ====== DESSERT MENU ======\n");
+        printf("\n");
+
+        // Using for loop to display all dessert menu items and prices:
+        for(int i = 0; i < 5; i++)
+        {
+                printf("%d. %s - $%.2f\n", i + 1, dessertNames[i], dessertPrices[i]);
+        }
+
+        printf("6. Back to Main Menu\n");
+        printf("\n");
+        // Collecting users choice
+        printf("Choose dessert item: ");
+        scanf("%d", &choice);
+
+        if(choice >= 1 && choice <= 5)
+        {
+                // Adding selected item prices to running bill
+                // Using the pointer to directly update the customers bill in main()
+                customer->totalBill += dessertPrices[choice - 1];
+
+                printf("\n");
+                 // Confirming item was added to order:
+                printf("%s added to order.\n", dessertNames[choice - 1]);
+                printf("\n");
+        }
+}
+
+// View Bill:
+void viewBill(struct Customer customer)
+{
+        printf("\n");
+        printf(" ====== CURRENT BILL ======\n");
+        printf("\n");
+        printf("Customer: %s\n", customer.name);
+        printf("Total Bill: $%.2f\n", customer.totalBill);
+}
+
+// Check-out:
+void checkout(struct Customer *customer)
+{
+        // Stores customers payment option:
+        int paymentChoice;
+
+        printf("\n");
+        printf(" ====== CHECKOUT ======\n");
+        printf("\n");
+
+        // Display the total amount owed:
+        printf("Total due: $%.2f\n", customer->totalBill);
+        printf("\n");
+        printf(" ==== PAYMENT OPTIONS ====\n");
+        printf("\n");
+        // Display payment methods:
+        printf("1. Cash\n");
+        printf("2. Card\n");
+        printf("\n");
+
+        // Collect payment from user:
+        printf("Enter payment option: ");
+        scanf("%d", &paymentChoice);
+
+        if(paymentChoice == 1)
+        {
+                // Variables needed for cash transcations:
+                float cash;
+                float change;
+
+                // Collect cash amount from user:
+                printf("Enter cash amount: ");
+                scanf("%f", &cash);
+
+                // Calculate customers total change:
+                change = cash - customer->totalBill;
+
+                printf("\n");
+                // Display change:
+                printf("Change: $%.2f\n", change);
+
+        }
+
+        else if(paymentChoice == 2)
+        {
+                // Display card payment approval:
+                printf("Card payment approved! Thank you %s\n", customer->name);
+        }
+        else
+        {
+                printf("ERROR: Payment failed!\n");
+        }
+
+        // Create receipt file:
+        FILE *receipt = fopen("receipt.txt", "w");
+
+        // Verify file opened successfully:
+        if(receipt != NULL)
+        {
+                // Write receipt information to file:
+                fprintf(receipt, " ====== DIGI DINNER RECEIPT ======\n");
+                printf("\n");
+                fprintf(receipt, "Customer: %s\n", customer->name);
+                fprintf(receipt, "Total Bill: $%.2f\n", customer->totalBill);
+
+                // Close file after writing:
+                fclose(receipt);
+                printf("Receipt saved to receipt.txt\n");
+        }
+        else
+        {
+                printf("ERROR: Cannot create receipt file.\n");
+        }
+}
+
+ 
+ 
