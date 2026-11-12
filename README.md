@@ -19,6 +19,9 @@
 - Card <br>
 
 ## Step 5
-- Receipt file<br>
-- Error handeling
+- Receipt file
+
+## Step 6
+- Editing code
+- Adding any necessary peices of code 
 
