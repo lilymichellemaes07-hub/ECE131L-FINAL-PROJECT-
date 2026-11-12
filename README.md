@@ -1,6 +1,6 @@
-# Restaurant Menu System (Group 10)
+# Restaurant Menu System 
 
-## Team Members
+## Team Members (Group 10)
 
 -Lily Maes<br>
 -Antony Yu<br>
