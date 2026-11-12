@@ -29,4 +29,21 @@ This project is a restaurant ordering system written in the C programming langua
 -Cash payment options<br>
 -Card payment options
 
+## Required
+-Pointers<br>
+-Pass-by-reference, dynamic memory where needed<br>
+-Functions<br>
+-W/ clear interfaces<br>
+-Control flow<br>
+-Arrays<br>
+-Structures<br>
+-Strings<br>
+-File I/O<br>
+-Realistic mini-system<br>
+-Debugging and error-handling habits<br>
+-Final project needs at least/demonstrates 5 of the core topics<br>
+-Github page<br>
+-Topic + Team Contract 
+
+
 
