@@ -1,4 +1,4 @@
-# Restaurant Menu System - Group 10
+# Restaurant Menu System (Group 10)
 
 ## Team Members
 
