@@ -58,7 +58,10 @@ This project demonstrates the following concepts from ECE 131L:
 
 - Tax calculation<br>
 - Inventory tracking<br>
-- Order history 
+- Order history
+- Split bill payment
+- Pin number for card payment (only 4 digits)
+
 
 
 
