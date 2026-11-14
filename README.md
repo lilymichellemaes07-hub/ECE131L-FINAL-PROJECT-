@@ -9,28 +9,26 @@
 
 ## Project Description
 
-This project is a restaurant ordering system written in the C programming language. The program allows the user to:
+The Digi Diner Restaurant Menu System is a menu driven C program that simulates the restaurant ordering process. Customers can browse menu categories, add items to their order, calculate a running bill, checkout using cash or card, and receive a receipt file containing their order. 
 
--View food menu items<br>
--View drink menu items<br>
--Calculate and view total bill<br>
--Checkout using cash or card<br>
--Receive an order summary 
-
-## Software used
-
--C Language<br>
--Cygwin64 Terminal<br>
--Github
 
 ## Project Features
--Food ordering<br>
--Drink ordering<br>
--Bill calculation<br>
--Cash payment options<br>
--Card payment options
 
-## Required
+-Customer name entry and validation<br>
+-Food menu ordering<br>
+-Drink menu ordering<br>
+-Dessert menu ordering<br>
+-Quantity selection<br>
+-Running bill calculation<br>
+-Cash payments<br>
+-Card payments<br>
+-Receipt generation<br>
+-Error handling and input validation
+
+
+
+## Course Concepts Demonstrated
+
 -Pointers<br>
 -Pass-by-reference, dynamic memory where needed<br>
 -Functions<br>
@@ -45,6 +43,28 @@ This project is a restaurant ordering system written in the C programming langua
 -Final project needs at least/demonstrates 5 of the core topics<br>
 -Github page<br>
 -Topic + Team Contract 
+
+
+## Software used
+
+-C Language<br>
+-Cygwin64 Terminal<br>
+-Github
+
+
+## How to Run
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
