@@ -21,6 +21,15 @@ The Digi Diner Restaurant Menu System is a menu-driven C program that simulates 
 - Receipt generation
 - Error handling and input validation
 
+## Sample Program Flow
+1. Enter customer name
+2. Select menu category
+3. Add items and quantities
+4. View current bill
+5. Checkout
+6. Pay with cash or card
+7. Generate receipt
+
 ## Course Concepts Demonstrated
 - Pointers
 - Pass-by-reference
@@ -38,6 +47,23 @@ The Digi Diner Restaurant Menu System is a menu-driven C program that simulates 
 - C Language
 - Cygwin64 Terminal
 - GitHub
+
+## How to Run
+### Clone the repository file using Git Bash: 
+git clone https://github-com/lilymichellemaes07-hub/ECE131-FINAL-PROJECT-.git
+
+### Navigate to the project folder:
+cd ECE131-FINAL-PROJECT-
+
+### Download libraries:
+
+###
+
+## Learning Outcomes
+
+## Challenges Faced
+
+## Repository Contents
 
 ## Future Improvements
 - Tax calculation
