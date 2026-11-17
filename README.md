@@ -6,6 +6,9 @@
 - Luis Bencomo
 - Grant McDonald
 
+## Authors
+This project was developed by Group 10 for ECE 131L as a final programming project demonstrating core concepts of the C programming language.
+
 ## Project Description
 The Digi Diner Restaurant Menu System is a menu-driven C program that simulates the restaurant ordering process. Customers can browse menu categories, add items to their order, calculate a running bill, checkout using cash or card, and receive a receipt file containing their order.
 
@@ -49,21 +52,47 @@ The Digi Diner Restaurant Menu System is a menu-driven C program that simulates 
 - GitHub
 
 ## How to Run
-### Clone the repository file using Git Bash: 
+### 1. Clone the repository file using Git Bash: 
 git clone https://github-com/lilymichellemaes07-hub/ECE131-FINAL-PROJECT-.git
 
-### Navigate to the project folder:
+### 2. Navigate to the project folder:
 cd ECE131-FINAL-PROJECT-
 
-### Download libraries:
+### 3. Compile the Program:
+gcc restaurantMenu.c -o restaurantMenu
 
-###
+### 4. Run the Program:
+./restaurantMenu
+
+### 5. Follow the Menu Prompts:
+- Enter customer name
+- Browse food, drink, and dessert menus
+- Add items to your order
+- View your running bill
+- Complete checkout using cash or card
+- Generate a receipt file 
+
 
 ## Learning Outcomes
+Through this project, our team gained exprience with: <br>
+- Creating a menu driven application in C
+- Using functions to organize large programs
+- Applying pointers and pass-by-reference
+- Implementing input validation
+- Collaborating through Github
+- Debugging and testing problems
 
 ## Challenges Faced
+Some challenges encountered during development included: <br>
 
 ## Repository Contents
+- README.md - Project overview and instructions
+- CodeSteps.md - Development process and code breakdown
+- restaurantMenu.c - Main source code 
+- STEP 1 - Customer name, main menu, and loop
+- STEP 2, 3, 4, 5 - Menu ordering, bill calculation, checkout, and receipt file
+- STEP 6 - Final edits, debugging and improvements
+
 
 ## Future Improvements
 - Tax calculation
