@@ -1,27 +1,33 @@
-# Code Beakdown
+# Digi Diner Code Breakdown
 
-### Step 1
-- Customer name<br>
-- Main menu<br>
-- Loop<br>
+## Step 1: Customer Setup
+- Customer name input
+- Input validation
+- Main menu
+- Program loop
 
-### Step 2
-- Food Menu<br>
-- Drink Menu<br>
-- Dessert Menu<br>
+## Step 2: Menu System
+- Food Menu
+- Drink Menu
+- Dessert Menu
 
-### Step 3 
-- Bill Calculation<br>
+## Step 3: Bill Calculation
+- Running total updates
+- Quantity multiplication
+- Order tracking
 
-### Step 4
-- Checkout<br>
-- Cash<br>
-- Card <br>
+## Step 4: Checkout
+- Checkout process
+- Cash payment
+- Card payment
 
-### Step 5
-- Receipt file
+## Step 5: Receipt Generation
+- Receipt file creation
+- Order summary
+- Payment information
 
-### Step 6
-- Editing code
-- Adding any necessary peices of code 
-
+## Step 6: Program Improvements
+- Debugging
+- Error handling
+- Additional features
+- Code cleanup and testing
