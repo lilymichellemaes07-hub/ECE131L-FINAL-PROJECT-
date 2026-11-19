@@ -84,6 +84,13 @@ Through this project, our team gained exprience with: <br>
 
 ## Challenges Faced
 Some challenges encountered during development included: <br>
+- fopen and fclose
+- Debugging
+- Sharing code/ GitHub
+- Choice repition
+- Input validation
+- File I/O
+- Bill calculation 
 
 ## Repository Contents
 - README.md - Project overview and instructions
